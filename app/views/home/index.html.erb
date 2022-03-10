@@ -1,0 +1,20 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <% user.documents.each do |document| %>
+          <td><%= document.body %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
